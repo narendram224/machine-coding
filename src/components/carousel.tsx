@@ -1,12 +1,10 @@
 "use client";
 import { useCarousel } from "@/hooks/use-carousel";
-import React, { Fragment, ReactNode, useState } from "react";
+import React, { Fragment, ReactNode } from "react";
 
 const Carousel = ({ slides }: { slides: ReactNode[] }) => {
   const length = slides.length;
-  //   const slides = Array.from({ length }, (_, index) => index + 1);
   const { onNext, onPrev, currentItem } = useCarousel({ noOfItems: length });
-  console.log("currentItem", currentItem, slides);
 
   return (
     <div>
