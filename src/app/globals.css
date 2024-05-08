@@ -18,12 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
 }
 
 @layer utilities {
@@ -31,3 +26,22 @@ body {
     text-wrap: balance;
   }
 }
+
+.carousel-item{
+  height: 20rem;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s cubic-bezier(0.1, 0.546, 0.575, 0.1);
+  /* background-color: blueviolet; */
+}
+
+.carousel-content {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  background-color: #f1f1f1;
+}
+
