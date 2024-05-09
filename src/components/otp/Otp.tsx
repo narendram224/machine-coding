@@ -4,6 +4,7 @@ interface OtpComponentProps {
   onComplete: (otp: number) => void;
   onChange?: (otp: number) => void;
   defaultValue?: number;
+  className?: string;
 }
 
 const OtpComponent = ({
@@ -11,6 +12,7 @@ const OtpComponent = ({
   onComplete,
   onChange,
   defaultValue,
+  className,
 }: OtpComponentProps) => {
   const OtpList = Array.from({ length: noOfOtp }, (_, index) => index + 1);
   const inputList = useRef<HTMLInputElement[]>([]);
@@ -59,7 +61,7 @@ const OtpComponent = ({
           <div key={otp}>
             <input
               type="text"
-              className="p-2 m-1 outline-none border border-gray-100"
+              className={`p-2 outline-none border border-gray-100 ${className}`}
               maxLength={1}
               ref={(el) => (inputList.current[index] = el as HTMLInputElement)}
               onChange={(e) => {
