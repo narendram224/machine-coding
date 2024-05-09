@@ -45,3 +45,17 @@ body {
   background-color: #f1f1f1;
 }
 
+.accordion_item{
+  list-style: none;
+
+}
+
+.accordion_item.active .button {
+  background-color: #72a7ad;
+}
+.answer_wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.2s;
+}
+
